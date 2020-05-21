@@ -1,9 +1,6 @@
 import * as actions from "./actionTypes";
 
-const initalState = [
-  { id: 1, todo: "hello", completed: false },
-  { id: 2, todo: "there", completed: true },
-];
+const initalState = [];
 
 const reducer = (state = initalState, action) => {
   switch (action.type) {
@@ -12,7 +9,7 @@ const reducer = (state = initalState, action) => {
         ...state,
         {
           id: Date.now(),
-          description: action.payload.description,
+          todo: action.payload.todo,
           completed: false,
         },
       ];
