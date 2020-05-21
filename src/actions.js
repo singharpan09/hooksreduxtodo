@@ -14,8 +14,6 @@ export const todoCompleted = (todo) => {
     type: actions.TODO_COMPLETED,
     payload: {
       id: todo.id,
-      todo: todo.todo,
-      completed: todo.completed,
     },
   };
 };

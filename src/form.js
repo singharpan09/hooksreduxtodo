@@ -23,6 +23,7 @@ const Form = () => {
         disabled={todo.length === 0 ? true : false}
         onClick={() => {
           dispatch(todoAdded(todo));
+          settodo("");
         }}
         variant="success"
       >

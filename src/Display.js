@@ -1,17 +1,26 @@
 import React from "react";
-import { useSelector } from "react-redux";
-
+import { useSelector, useDispatch } from "react-redux";
+import { Badge } from "react-bootstrap";
+import { todoCompleted } from "./actions";
 const Display = () => {
   const todo = useSelector((state) => {
     return state;
   });
-  console.log(todo);
+
+  const dispatch = useDispatch();
   return (
     <React.Fragment>
       {todo.map((todo) => (
         <p>
           {todo.todo}
-          <input type="checkbox" value={todo.complted} />
+          <input
+            type="checkbox"
+            value={todo.complted}
+            onChange={() => dispatch(todoCompleted(todo))}
+          />
+          {todo.completed === true && (
+            <Badge variant="secondary">completed</Badge>
+          )}
         </p>
       ))}
     </React.Fragment>
