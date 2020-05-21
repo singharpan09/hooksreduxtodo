@@ -1,6 +1,9 @@
 import * as actions from "./actionTypes";
 
-const initalState = [];
+const initalState = [
+  { id: 1, todo: "hello", completed: false },
+  { id: 2, todo: "there", completed: true },
+];
 
 const reducer = (state = initalState, action) => {
   switch (action.type) {

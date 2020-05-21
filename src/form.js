@@ -18,9 +18,9 @@ const Form = () => {
       </InputGroup>
       <Button
         disabled={todo.length === 0 ? true : false}
-        onClick={() => {
-          addtodo(todo);
-        }}
+        // onClick={() => {
+        //   addtodo(todo);
+        // }}
         variant="success"
       >
         Submit

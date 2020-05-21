@@ -6,7 +6,9 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducer from "./reducer";
 
-const store = createStore(reducer);
+const devtool =
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const store = createStore(reducer, devtool);
 
 ReactDOM.render(
   <React.StrictMode>
