@@ -7,3 +7,5 @@ const Form = () => {
     </React.Fragment>
   );
 };
+
+export default Form;

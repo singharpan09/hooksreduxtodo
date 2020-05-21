@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./form";
 
 import "./App.css";
 
@@ -6,7 +7,7 @@ function App() {
   return (
     <React.Fragment>
       <div className="App">
-        <h3>This is main </h3>
+        <Form />
       </div>
     </React.Fragment>
   );
